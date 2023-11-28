@@ -4,8 +4,10 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.NamedQuery;
 import java.util.Objects;
 
+@NamedQuery(name = "Book.jpaNamed", query = "FROM Book b where b.title=:title")
 @Entity
 public class Book {
 

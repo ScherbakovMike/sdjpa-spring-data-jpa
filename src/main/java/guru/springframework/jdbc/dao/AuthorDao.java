@@ -1,6 +1,7 @@
 package guru.springframework.jdbc.dao;
 
 import guru.springframework.jdbc.domain.Author;
+import java.util.Optional;
 
 /**
  * Created by jt on 8/22/21.
@@ -8,7 +9,7 @@ import guru.springframework.jdbc.domain.Author;
 public interface AuthorDao {
     Author getById(Long id);
 
-    Author findAuthorByName(String firstName, String lastName);
+    Optional<Author> findAuthorByName(String firstName, String lastName);
 
     Author saveNewAuthor(Author author);
 
